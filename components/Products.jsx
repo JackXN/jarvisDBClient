@@ -73,6 +73,7 @@ const Products = ({ cat, filters,sort }) => {
 const styles = {
     container: {
         display: 'flex',
+        flexWrap: 'wrap',
         alignItems:'center',
         justifyContent: 'center'
     }

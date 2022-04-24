@@ -68,7 +68,9 @@ const styles = {
         margin:'20px',
         borderRadius:'20px',
         backgroundColor: '#2F2E2E',
-        color: 'white'
+        color: 'white',
+        width: '450px',
+        height:'1200px'
     },
 
     info: {
