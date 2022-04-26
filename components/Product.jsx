@@ -33,20 +33,19 @@ function Product({item}) {
           setQuantity(quantity + 1);
         }
       };
-    
       const handleClick = () => {
         dispatch(
           addProduct({ ...product, quantity, color, size })
         );
       };
-
+ 
     return (
        <Box sx={styles.container}>
-           <Box>
-           <img src={item.img} height='350px' />
-           <Box sx={styles.info}>
-            <Text as='p' fontSize='35px' color='orange'>{item.title}</Text>
-            <Text as='p' margin='50px' padding='90px'  pt='0px' pb='0px'>{item.description}</Text>
+           <Box sx={styles.cardInfo}>
+           <img src={item.img}/>
+           <Box sx={styles.desc}>
+            <Text as='p' fontSize='35px' fontWeight='bold' textTransform='uppercase'>{item.title}</Text>
+            <Text as='p'  pt='0px' >{item.description}</Text>
            <Text as='p'>Category: {item.category}</Text>
            <p>Price: {item.price}$</p>
            <p>Collection Name: {item.collectionName}</p>
@@ -64,17 +63,22 @@ const styles = {
         alignItems:'center',
         justifyContent: 'center',
         textAlign: 'center',
-        border: 'solid black 1px',
         margin:'20px',
-        borderRadius:'20px',
-        backgroundColor: '#2F2E2E',
-        color: 'white',
+        color: 'black',
         width: '450px',
-        height:'1200px'
+       
+        
     },
 
-    info: {
-textAlign: 'center'
+    desc: {
+textAlign: 'center',
+background: 'white',
+margin: '0px'
+
+    },
+    cardInfo: {
+     background: '#2F2E2E',
+     borderRadius: '20px'
     }
 }
 
