@@ -16,11 +16,11 @@ const Products = ({ cat, filters,sort }) => {
           try {
             const res = await axios.get(
               cat
-                ? `${BASE_URL}/api/products?category=${cat}`
-                : `${BASE_URL}/api/products`
+                ? `${BASE_URL}/api/collections?category=${cat}`
+                : `${BASE_URL}/api/collections`
             );
             setProducts(res.data);
-            // console.log(res.data)
+            console.log(res.data)
           } catch (err) {}
         };
         getProducts();
@@ -54,7 +54,7 @@ const Products = ({ cat, filters,sort }) => {
       }, [sort]);
     return (
        <>
-       <Text as='h1' textAlign='center' fontSize='50px' mb='50px' textDecoration='underline'>Products</Text>
+       <Text as='h1' textAlign='center' fontSize='50px' color='#fff'>Products</Text>
        <Box sx={styles.container}>
 
 
